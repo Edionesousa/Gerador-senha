@@ -4,6 +4,10 @@
     font-family: 'Geologica', sans-serif;
     width: 100%;
     box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
 }
 
 body {
@@ -14,7 +18,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
 }
 
 .logo {
@@ -24,7 +27,7 @@ body {
 }
 
 .container-input {
-    max-width: 350px;
+    max-width: 500px;
     margin: 14px 0;
 }
 
@@ -33,20 +36,103 @@ body {
     font-size: 22px;
 }
 
-.slider{
+.slider {
     -webkit-appearance: none;
     border-radius: 10px;
+    max-width: 400px;
+
     width: 100%;
     height: 18px;
     outline: none;
     margin-top: 8px;
     cursor: pointer;
 }
-.button-cta{
-    height: 40px;
+
+.button-cta {
+    height: 25px;
     background-color: #3eb72b;
+    max-width: 300px;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
     margin-top: 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button-cta:hover {
+    background-color: #3eb73e9f;
+    border: 1px solid;
+    font-size: 20;
+}
+
+.container-passwor {
+    display: flex;
+    max-width:300px;
+    margin: 14px;
+    padding: 3px;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.title {
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.password {
+    background-color: rgba(255, 255, 255, 0.226);
+    font-size: 18px;
+    min-height: 40px;
+    color: rgba(255, 0, 0, 0.884);
+    height: auto;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.password:hover {
+    border-style: dashed;
+    border-color: wheat;
+    transform: scale(1.02);
+
+}
+
+.tooltip {
+    color: whitesmoke;
+    position: relative;
+    top: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+.hideOn{
+    display:  ;
+}
+
+.container-password:hover .tooltip {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+
 }

@@ -6,31 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Keywords" content="gerador de senha, gerador de password">
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Geologica:wght@100;200;300;400;500&family=Libre+Baskerville:ital@1&family=Noto+Serif:ital,wght@0,400;1,400;1,700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <title>Gerador de senha</title>
-    </head>
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de senha</title>
+</head>
+
+<body>
+    <img class="logo" src="logoGeradorSenha (1).png" alt="imagem logo">
     
-    <body>
-        <img class="logo" src="logoGeradorSenha (1).png" alt="imagem logo">
-
-        <main class="container-input">
-            <span>Tamanho  <span id="valor">17 </span>Caracteres </span>
-            <input type="range"id="slider" class="slider"  min="8" max="25" value="12">
-
-            <button id="button" class="button-cta"> Gerar Sua Senha</button>
-
-            <div id="container-password" class="container-password hide">
-                <span class="title"> Senha Gerada</span>
-                <span id="password"  class="password"> 098345093458029345</span>
-                <span>Click na senha para copia-la</span>
-            </div>
-        </main>
-</html>
+    <main class="container-input">
+        <span>Definido o tamanho <span class="valor" id="valor" > </span> Caracteres </span>
+        <input id="slider"class="slider"type="range"max="25"min="8"value="15">
         
-        <script src="script.js"></script>
+        <button id="button" class="button-cta" onclick="geradorSenha()"> Gerar Sua Senha</button>
+    </main>
+        
+        <div id="container-password" class="container-password">
+            <span class="title"> Senha Gerada</span>
+            <span onclick="copyPassword()" id="password" class="password"> </span>
+            <span onclick="copyPassword()" class="tooltip"> Click na senha para copia-la</span>
+        </div>
 </body>
+</html>
