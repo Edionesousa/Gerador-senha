@@ -12,6 +12,8 @@
 
 body {
     background-color: #18181b9d;
+    display: flex;
+    columns: none;
     width: 98%;
     height: 100vh;
     display: flex;
@@ -21,8 +23,12 @@ body {
 }
 
 .logo {
+    text-align: center;
+    align-items: center;
     max-width: 400px;
     margin-bottom: 24px;
+    height: 80px;
+    margin-top:12px ;
 
 }
 
@@ -69,11 +75,9 @@ body {
 
 .container-passwor {
     display: flex;
-    max-width:300px;
-    margin: 14px;
-    padding: 3px;
     align-items: center;
-    flex-direction: column;
+    text-align: center;
+    max-width:300px;
     cursor: pointer;
 
 }
@@ -87,17 +91,14 @@ body {
 }
 
 .password {
+    display: flex;
     background-color: rgba(255, 255, 255, 0.226);
     font-size: 18px;
     min-height: 40px;
     color: rgba(255, 0, 0, 0.884);
     height: auto;
-    width: 400px;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    max-width: 300px;
     width: 100%;
-    justify-content: center;
     text-align: center;
     align-items: center;
     overflow-wrap: break-word;
@@ -105,7 +106,6 @@ body {
     cursor: pointer;
 
 }
-
 .password:hover {
     border-style: dashed;
     border-color: wheat;

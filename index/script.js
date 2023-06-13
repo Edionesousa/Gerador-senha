@@ -1,3 +1,6 @@
+
+
+
 let sliderElement = document.querySelector("#slider");
 let buttonElement = document.querySelector("#button");
 let sizePassword = document.querySelector("#valor");
@@ -11,28 +14,28 @@ let novaSenha = "";
 sizePassword.innerHTML = sliderElement.value;
 
 
-slider.oninput = function(){
+slider.oninput = function () {
     sizePassword.innerHTML = this.value;
 }
 
 
-function geradorSenha(){
+function geradorSenha() {
 
     let pass = "";
 
-    for(let i = 0, n = charset.length; i < sliderElement.value; ++ i){
-        pass += charset.charAt(Math.floor(Math.random() * n ));
-        
+    console.log(i)
+    for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
+        pass += charset.charAt(Math.floor(Math.random() * n));
+
     }
     password.innerHTML = pass;
-   novaSenha = pass;
+    novaSenha = pass;
 
 }
 
-function  copyPassword(){
+function copyPassword() {
     navigator.clipboard.writeText(novaSenha);
-    alert("Senha copiada")
-
+    alert("Senha copiada!")
 }
 
 
