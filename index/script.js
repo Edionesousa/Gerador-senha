@@ -1,76 +1,73 @@
 
 
 
-let sliderElement = document.querySelector("#slider");
-let buttonElementMist = document.querySelector("#buttonMist");
-let buttonElementeNum = document.querySelector("#")
-let sizePassword = document.querySelector("#valor");
-let password = document.querySelector("#password");
-let containerPassword = document.querySelector("#container-password");
+const sliderElement = document.querySelector("#slider");
+const buttonElement = document.querySelector("#button");
 
+const buttonElementeNum = document.querySelector("#buttonNum")
+const buttonElementeCact = document.querySelector("#buttonCact")
 
+const sizePassword = document.querySelector("#valor");
+const password = document.querySelector("#password");
+const containerPassword = document.querySelector("#container-password");
 
-let charsetMist = "qwertyuiopasdfghjklçzxcvbnmQWERTYUIOPASDFGHJKLÇZXCVBNM12345678$%90!@#¨&*()_+:><|";
-let charsetNum = "1234546789";
-let novaSenha = "$%90!@#¨&*()_+:><";
+/* VARIAVEL DADOS DE CONSUMO */
+const charset = "qwertyuiopasdfghjklçzxcvbnmQWERTYUIOPASDFGHJKLÇZXCVBNM1234567890%!@&*()+:><;#¨";
+const charsetNum = "1234546789";
+const charsetCact = "%!@&*()+:><;#¨";
 
 sizePassword.innerHTML = sliderElement.value;
+const novaSenha = "";
 
 
 slider.oninput = function () {
     sizePassword.innerHTML = this.value;
+
 }
+/** INICIO DAS FUNÇOES */
 
+function geradorSenha() {
 
-function geradorSenhaMist() {
-    
-    let passMist = "";
-    
-    for (let mist = 0, m = charsetMist.length; m < sliderElement.value; ++m) {
-        passMist += charsetMist.charAt(Math.floor(Math.random() * m));
-        if(mist == true){
-        }
-        console.log();
+    let pass = "";
+
+    for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
+        pass += charset.charAt(Math.floor(Math.random() * n));
     }
-    password.innerHTML = passMist;
-    novaSenha = passMist;
 
+    password.innerHTML = pass;
+    console.log(pass)
 }
-  /* function geradorSenhaNum(){
-    let passNun = "";
-        for (let num = 0, n = charsetNum.length; i < sliderElement.value; ++num) {
-            pass += charsetNum.charAt(Math.floor(Math.random() * n));
-            if(num === true){
-                return;
-            }
-        }
-        password.innerHTML = passNun;
-        novaSenha = passNun;
-    
-    
-/*
+/**FUNNAÇAO SENHA NUMERICA */
+function geradorSenhaNum() {
+    let pass = "";
+
+    for (let a = 0, n = charsetNum.length; a < sliderElement.value; ++a) {
+        pass += charsetNum.charAt(Math.floor(Math.random() * n));
     }
-     for (let carct = 0, c = charset.length; i < sliderElement.value; ++carct) {
-         pass += charset.charAt(Math.floor(Math.random() * c));
-         
-     }
- */
 
-   /* password.innerHTML = pass;
-    novaSenha = pass;
-    novaSenha = passNun;
+    password.innerHTML = pass;
+    console.log(pass);
 
 }
+/**FUNÇAO SENHA SO DE CARACTERES */
+function geradorSenhaCarct() {
 
+    let pass = "";
+
+    for (let c = 0, n = charsetCact.length; c < sliderElement.value; ++c) {
+        pass += charsetCact.charAt(Math.floor(Math.random() * n));
+    }
+
+    password.innerHTML = pass;
+    console.log(pass)
+}
+
+/**FUNÇAO PARA COMPIAR A SENHA  */
 function copyPassword() {
-    navigator.clipboard.writeText(novaSenha);
     alert("Senha copiada!")
-    if (alert !== false) {
-        return;
-    }
-    console.log(i)
+
 }
-*/
+
 
 
 
